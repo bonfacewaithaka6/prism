@@ -1,95 +1,63 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+import Layout from '../components/layout';
+import Grid from '@mui/material/Grid';
+import Image from 'next/image';
+import { Typography } from '@mui/material';
+import { useEffect, useState } from 'react';
 
-export default function Home() {
+const Home = () => {
+
+ 
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <Layout>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <Grid container spacing={3} direction="row-reverse">
+       
+        <Grid item xs={6}>
+          <Image src="https://images.pexels.com/photos/5081917/pexels-photo-5081917.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Image 1" width={400} height={300} />
+        </Grid>
+        <Grid item xs={6}>
+          <Typography variant="body1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero et magna ultrices, sit amet cursus ligula aliquet.
+          </Typography>
+        </Grid>
+        <Grid item xs={6}>
+          <Typography variant="body1">
+            Vestibulum eu convallis quam. Sed nec sapien consectetur, maximus est ac, molestie sem. Nunc ultricies nunc vel felis rutrum, vel fermentum velit placerat.
+          </Typography>
+        </Grid>
+        <Grid item xs={6} >
+          <Image src="https://images.pexels.com/photos/6347733/pexels-photo-6347733.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Image 2" width={400} height={350} />
+        </Grid>
+        <Grid item xs={6}>
+          <Image src="https://images.pexels.com/photos/7567441/pexels-photo-7567441.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Image 3" width={400} height={350} />
+        </Grid><Grid item xs={6}><Typography variant="body1">
+          Proin malesuada ante ac urna rutrum, vitae volutpat justo congue. Cras at dolor et elit ultricies volutpat.
+        </Typography>
+        </Grid>
+        <Grid item xs={6}>
+          <Typography variant="body1">
+            Fusce fermentum libero in lorem feugiat, a efficitur orci placerat. In nec magna nec ligula vestibulum scelerisque eget vel justo.
+          </Typography>
+        </Grid>
+        <Grid item xs={6}>
+          <Image src="https://images.pexels.com/photos/26775917/pexels-photo-26775917/free-photo-of-person-photographing-city-skyscrapers.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Image 4" width={400} height={350} />
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        </Grid>
+      </Grid>
+      
+    </Layout>
   );
-}
+};
+
+export default Home;
+
+
+
+
+
+
+
+
+
